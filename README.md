@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Project Demo
+## Screenshot
 ![Project updated screenshot](src/assets/screenshots/screenshot-1.png)
 
 ## Available Scripts

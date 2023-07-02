@@ -9,14 +9,14 @@ it('renders correctly', async () => {
   const page = await browser.newPage();
   await page.goto('http://localhost:3000');
   const image = await page.screenshot();
-
+  await browser.close();
   expect(image).toMatchImageSnapshot({
     storeReceivedOnFailure: true,
     customSnapshotsDir: 'src/assets/screenshots',
     customDiffDir: 'src/assets/screenshots',
     customReceivedDir: 'src/assets/screenshots',
-    failureThresholdType:'percent',
-    failureThreshold:1,
-    updatePassedSnapshot:true
+    failureThresholdType: 'percent',
+    failureThreshold: 1,
+    updatePassedSnapshot: true
   });
-},50000);
+}, 50000);

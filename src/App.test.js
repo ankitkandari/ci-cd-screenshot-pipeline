@@ -14,6 +14,9 @@ it('renders correctly', async () => {
     storeReceivedOnFailure: true,
     customSnapshotsDir: 'src/assets/screenshots',
     customDiffDir: 'src/assets/screenshots',
-    customReceivedDir: 'src/assets/screenshots'
+    customReceivedDir: 'src/assets/screenshots',
+    failureThresholdType:'percent',
+    failureThreshold:1,
+    updatePassedSnapshot:true
   });
 },50000);

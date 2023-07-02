@@ -1,8 +1,18 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { toMatchImageSnapshot } from 'jest-image-snapshot';
+import puppeteer from 'puppeteer';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+expect.extend({ toMatchImageSnapshot });
+
+it('renders correctly', async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('http://localhost:3000');
+  const image = await page.screenshot();
+
+  expect(image).toMatchImageSnapshot({
+    storeReceivedOnFailure: true,
+    customSnapshotsDir: 'src/assets/screenshots',
+    customDiffDir: 'src/assets/screenshots',
+    customReceivedDir: 'src/assets/screenshots'
+  });
 });

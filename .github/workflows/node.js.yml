@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm start &
-    - run: npm test --exit
+    - run: CI=true npm test
     - name: Upload screenshot to S3
       uses: aws-actions/configure-aws-credentials@v1
       with:

@@ -32,8 +32,8 @@ jobs:
     - name: Upload screenshot to S3
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-west-2
     - name: move image to S3 bucket
       run: aws s3 mv src/assets/screenshots/app-test-js-renders-correctly-1-snap-received.png s3://ci-cd-screenshot-pipeline --acl public-read

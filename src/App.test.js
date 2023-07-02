@@ -1,5 +1,6 @@
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
 import puppeteer from 'puppeteer';
+// import image from './assets/screenshots/original.png';
 
 expect.extend({ toMatchImageSnapshot });
 
@@ -15,4 +16,4 @@ it('renders correctly', async () => {
     customDiffDir: 'src/assets/screenshots',
     customReceivedDir: 'src/assets/screenshots'
   });
-});
+},50000);

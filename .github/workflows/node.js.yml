@@ -27,7 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm start --if-present
+    - run: npm start &
     - run: npm test
     - name: Upload screenshot to S3
       uses: aws-actions/configure-aws-credentials@v1

@@ -6,8 +6,6 @@ expect.extend({ toMatchImageSnapshot });
 
 it('renders correctly', async () => {
 
-  const imageFileName = `${process.env.IMAGE_FILE_NAME}`;
-
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('http://localhost:3000');
@@ -21,6 +19,6 @@ it('renders correctly', async () => {
     failureThresholdType: 'percent',
     failureThreshold: 1,
     updatePassedSnapshot: true,
-    customSnapshotIdentifier:`${imageFileName}`
+    customSnapshotIdentifier:`screenshot`
   });
 }, 50000);

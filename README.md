@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ##Screenshots
-![Demo Screenshot](https://ci-cd-screenshot-pipeline.s3.eu-west-2.amazonaws.com/app-test-js-renders-correctly-1-snap.png)
+![Demo Screenshot](https://ci-cd-screenshot-pipeline.s3.eu-west-2.amazonaws.com/screenshot-3.png)
 
 ## Available Scripts
 

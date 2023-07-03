@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm start &
-    - run: export IMAGE_FILE_NAME=screenshot-$(uuidgen) | npm test
+    - run: export IMAGE_FILE_NAME=screenshot-$(uuidgen) | npm test | echo $IMAGE_FILE_NAME
     - run: npm run update-readme
     - name: Upload screenshot to S3
       uses: aws-actions/configure-aws-credentials@v1

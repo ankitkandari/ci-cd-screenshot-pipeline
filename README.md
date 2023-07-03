@@ -7,4 +7,4 @@ Whenever there are new changes to the code and a new commit is pushed into the r
 During the test, a screenshot of the homepage is generated and uploaded to S3, a link for which is already present in the readme file.
 
 ## Latest Homepage Screenshot
-![Demo Screenshot](https://ci-cd-screenshot-pipeline.s3.eu-west-2.amazonaws.com/screenshot.png)
+![Demo Screenshot](https://ci-cd-screenshot-pipeline.s3.eu-west-2.amazonaws.com/screenshot.png?v=1)
